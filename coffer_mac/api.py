@@ -5,6 +5,10 @@ import requests
 
 
 def lookup(string):
+    """
+    Perform a MAC address lookup using Coffer.
+    """
+
     r = requests.get('http://coffer.com/mac_find/?string='+string)
     soup = bs4.BeautifulSoup(r.text, 'html.parser')
 
