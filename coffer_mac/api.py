@@ -1,4 +1,4 @@
-"""coffer_mac.lookup"""
+"""coffer_mac.api"""
 
 import bs4
 import requests
@@ -19,9 +19,9 @@ class CofferMAC:
         request = self.session.get(url)
 
         soup = bs4.BeautifulSoup(request.text, 'html.parser')
-        rows = soup.find_all('tr', class_="table2")[1:]
+        rows = soup.find_all('tr', class_='table2')[1:]
 
-        results = []
+        results = list()
         for row in rows:
             prefix, vendor = row.find_all('td')
             results.append({'prefix': prefix.text, 'vendor': vendor.text})
