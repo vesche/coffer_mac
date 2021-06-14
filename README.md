@@ -1,4 +1,5 @@
 # coffer_mac
+
 Tiny Python API for performing MAC address lookups using [Coffer](http://coffer.com/mac_find/).
 
 ## Install

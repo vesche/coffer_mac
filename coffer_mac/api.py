@@ -3,7 +3,6 @@
 import bs4
 import requests
 
-
 class CofferMAC:
     def __init__(self, proxy=None):
         self.base_url = 'http://coffer.com/mac_find/?string={s}'
